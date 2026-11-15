@@ -1,0 +1,48 @@
+/* Shared look for every policy page. Plain, readable, light and dark. */
+:root {
+  --bg: #f7f8fa;
+  --surface: #ffffff;
+  --fg: #1a2033;
+  --soft: #5d6578;
+  --line: #e3e6ed;
+  --accent: #2d5bd7;
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0f131c;
+    --surface: #171c28;
+    --fg: #e7eaf1;
+    --soft: #9aa2b4;
+    --line: #262d3d;
+    --accent: #8fb0ff;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font: 17px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+main { max-width: 720px; margin: 0 auto; padding: 40px 20px 64px; }
+a { color: var(--accent); }
+a:hover { text-decoration-thickness: 2px; }
+.crumb { font-size: 15px; color: var(--soft); margin: 0 0 28px; }
+.crumb a { color: var(--soft); }
+h1 { font-size: 34px; line-height: 1.2; letter-spacing: -0.02em; margin: 0 0 6px; }
+h2 { font-size: 21px; line-height: 1.3; margin: 36px 0 8px; }
+.meta { color: var(--soft); font-size: 15px; margin: 0 0 28px; }
+.summary { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 16px 20px; margin: 0 0 8px; }
+.summary p { margin: 0; }
+ul { padding-left: 22px; }
+li { margin: 4px 0; }
+footer { max-width: 720px; margin: 0 auto; padding: 0 20px 40px; color: var(--soft); font-size: 14px; }
+
+/* The index: one card per app. */
+.apps { list-style: none; padding: 0; display: grid; gap: 14px; margin: 28px 0 0; }
+.apps li { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 18px 20px; margin: 0; }
+.apps h2 { margin: 0 0 4px; font-size: 20px; }
+.apps p { margin: 0 0 10px; color: var(--soft); font-size: 15px; }
+.apps .links { display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 16px; }
